@@ -11,7 +11,7 @@ import {
   isLegalMoveQueen,
   isLegalMoveRook,
 } from "../utils/legality";
-import { mapPiece } from "../utils/piece";
+import { mapPiece, getColor } from "../utils/piece";
 
 type PieceI =
   | "p"
@@ -36,9 +36,6 @@ export interface Player {
   capturedPieces: PieceI[];
   timeLeft: string;
 }
-
-const getColor = (piece: string) =>
-  piece ? (piece.toUpperCase() === piece ? "white" : "black") : "";
 
 const Chessboard = () => {
   // define the array of active squares
@@ -310,7 +307,5 @@ const Chessboard = () => {
     </div>
   );
 };
-
-export { getColor };
 
 export default Chessboard;

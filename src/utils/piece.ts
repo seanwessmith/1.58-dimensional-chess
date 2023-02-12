@@ -28,7 +28,11 @@ const mapPiece = {
   p: "black-pawn",
 };
 
+const getColor = (piece: string) =>
+  piece ? (piece.toUpperCase() === piece ? "white" : "black") : "";
+
 export {
   reverseMapPiece,
   mapPiece,
+  getColor,
 }
