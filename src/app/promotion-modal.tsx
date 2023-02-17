@@ -8,7 +8,7 @@ interface Props {
   onClose: (pieceSelected: string) => void;
 }
 
-const Modal = ({ promotionSquare, isOpen, onClose }: Props) => {
+const PromotionModal = ({ promotionSquare, isOpen, onClose }: Props) => {
   // use state to track the visibility of the modal
   const [modalIsOpen, setModalIsOpen] = useState(isOpen);
 
@@ -47,4 +47,4 @@ const Modal = ({ promotionSquare, isOpen, onClose }: Props) => {
   );
 };
 
-export default Modal;
+export default PromotionModal;

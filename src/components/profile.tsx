@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ClockIcon } from "@heroicons/react/24/solid";
 import { mapPiece } from "@/utils/piece";
-import { Player } from "@/app/page";
+import { Player } from "@/app/pages/chessboard";
 
 interface Props {
   player: Player;
