@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useState } from "react";
 import { reverseMapPiece } from "../utils/piece";
 
 interface Props {
@@ -10,7 +9,7 @@ interface Props {
 
 const PromotionModal = ({ promotionSquare, isOpen, onClose }: Props) => {
   // use state to track the visibility of the modal
-  const [modalIsOpen, setModalIsOpen] = useState(isOpen);
+  // const [modalIsOpen, setModalIsOpen] = useState(isOpen);
 
   if (!isOpen || !promotionSquare) {
     return null;
@@ -33,7 +32,7 @@ const PromotionModal = ({ promotionSquare, isOpen, onClose }: Props) => {
             width="32"
             height="32"
             onClick={() => {
-              setModalIsOpen(false);
+              // setModalIsOpen(false);
               onClose(
                 reverseMapPiece[
                   `${pieceColor}-${piece}` as keyof typeof reverseMapPiece

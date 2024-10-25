@@ -28,7 +28,7 @@ const Callback = () => {
       }
     };
     asyncEffect();
-  }, []);
+  }, [supabase.auth]);
   return (
     <div>
       <h1>Callback</h1>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getColor } from '../utils/piece';
 
 const isBlockedBishop = (activeSquares: string[], pieces: { [key: string]: string }, pieceColor: string, previousSquare: string, square: string): boolean => {

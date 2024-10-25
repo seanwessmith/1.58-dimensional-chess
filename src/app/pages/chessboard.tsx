@@ -307,8 +307,8 @@ const Chessboard = () => {
           <li>No en passant, castling, or two-step-forward pawn jumps.</li>
           <li>
             Chess pieces cannot move onto or through the 37 covered squares.
-            Knights cannot move onto the 37 covered squares, but don't care what
-            they move "through".
+            Knights cannot move onto the 37 covered squares, but don{'\''}t care what
+            they move {'"'}through{'"'}.
           </li>
         </ul>
       </div>
