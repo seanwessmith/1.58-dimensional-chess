@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { ClockIcon } from "lucide-react";
-import { mapPiece } from "@/utils/piece";
-import { Player } from "@/app/pages/chessboard";
+import type { Player } from "./chessboard";
+import ChessPiece from "./chess-piece";
 
 interface Props {
   player: Player;
@@ -9,25 +8,20 @@ interface Props {
 
 const UserProfile = ({ player }: Props) => {
   return (
-    <div className="flex flex-col">
-      <div className="flex items-center flex-row justify-between">
-        <p className="text-white font-medium">{player.username} (1200)</p>
-        <div className="bg-white w-32 flex justify-between h-10 -mb-4 rounded-sm pr-2 pl-2">
-          <ClockIcon key="clock" className="h-6 w-6 text-gray-600 mt-2" />
-          <p className="text-gray-600 text-xl leading-10">{player.timeLeft}</p>
+    <div className="flex w-full flex-col gap-2 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+      <div className="flex items-center justify-between gap-4">
+        <p className="font-semibold text-slate-200">{player.username} (1200)</p>
+        <div className="flex h-10 w-32 items-center justify-between rounded-lg bg-slate-800 px-3 text-white">
+          <ClockIcon className="h-5 w-5 text-slate-400" />
+          <p className="text-lg tabular-nums">{player.timeLeft}</p>
         </div>
       </div>
-      <div className="flex justify-start bg-white opacity-50 max-w-md h-10">
+      <div className="flex min-h-10 flex-wrap items-center gap-1 rounded-lg bg-white/5 p-2">
         {player.capturedPieces.map((piece, index) => (
-          <Image
+          <ChessPiece
             key={index}
-            src={`/chess-pieces/${mapPiece[piece]}.png`}
-            sizes="32"
-            alt={piece}
-            className={`w-10 h-10`}
-            priority
-            width={10}
-            height={10}
+            piece={piece}
+            size="sm"
           />
         ))}
       </div>

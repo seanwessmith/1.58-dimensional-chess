@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+button {
+  cursor: pointer;
+}
+
+input {
+  border: solid 1px #ccc;
+  border-radius: 5px;
+}

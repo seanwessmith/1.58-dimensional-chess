@@ -1,0 +1,15 @@
+name = "auth-worker"
+main = "./auth.ts"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "AUTH_TOKENS"
+id = "7675ecfacc5d43359edbe5f5fb623473"
+
+[vars]
+FRONTEND_URL = "http://localhost:3000"
+EMAIL_FROM = "onboarding@resend.dev"
+
+# Configure secrets locally or in Cloudflare with:
+# wrangler secret put JWT_SECRET
+# wrangler secret put RESEND_API_KEY
